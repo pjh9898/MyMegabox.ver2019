@@ -1,0 +1,58 @@
+body{
+    font-family: 'Noto Sans KR', sans-serif;;
+    margin: 0;
+    padding: 0;
+}
+
+#header{
+    height: 50px;
+}
+
+#header-logo{
+    display: flex;
+    align-items: center;
+}
+
+.container-fluid{
+    margin: 0 auto;
+    width: 1280px;
+    padding: 0;
+}
+
+.row{
+    padding-left: 16px;
+}
+
+#logo{
+    padding-right: 15px;
+}
+#logo-sub{
+    display: flex;
+    align-items: center;
+
+}
+
+#nav{
+    height: 50px;
+    display: flex;
+    border-right: 1px solid lightgray;
+    font-size: 15px; font-weight: 700; color: #444;
+}
+
+#nav a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color:black;
+    border-left: 1px solid lightgray;
+    height: 50px;
+    width: 85px;
+}
+
+@media screen and (max-width: 1280px) {
+    .container-fluid{
+        width: 100%;
+        margin: 0;
+    }
+}
