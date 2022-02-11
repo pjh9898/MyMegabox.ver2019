@@ -17,24 +17,35 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/808c0c7535.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    
+
+    <!-- header -->
+
     <header id="header">
       <div class="container-fluid">
-        <div class="row">
+        <div class="row header-height">
           <div class="col d-flex align-items-center">
             <div id="header-logo">
               <a href="#" id="logo"
                 ><img src=mega-image/logo.png width="155"></a
               >
-              <a href="#" id="logo-sub"
+              <a href="#" id="logo-sub" class="d-none d-md-block"
                 ><img src=mega-image/logo-sub.png width="157"></a
               >
+              <svg id="bar-icon" class="d-lg-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path
+                  d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"
+                />
+              </svg>
             </div>
           </div>
-          <div class="col d-flex justify-content-end">
+          <div class="col d-flex d-none d-lg-block justify-content-end">
             <nav id="nav">
               <a href="#">영화</a>
               <a href="#">큐레이션</a>
@@ -48,6 +59,49 @@
         </div>
       </div>
     </header>
+
+    <!-- banner -->
+
+    <div id="banner">
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="mega-image/main_slider02_2000.jpg" class="d-block w-100 h-100">
+            <div class="carousel-caption">
+              <h3>어벤져스 : 엔드게임</h3>
+              <p>역대 최단기간 1000만 관객 돌파 기록</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="mega-image/main_slider01_2000.jpg" class="d-block w-100 h-100">
+            <div class="carousel-caption">
+              <h3>어벤져스 : 엔드게임</h3>
+              <p>역대 최단기간 1000만 관객 돌파 기록</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="mega-image/main_slider03_2000.jpg" class="d-block w-100 h-100">
+            <div class="carousel-caption">
+              <h3>어벤져스 : 엔드게임</h3>
+              <p>역대 최단기간 1000만 관객 돌파 기록</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

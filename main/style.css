@@ -4,15 +4,6 @@ body{
     padding: 0;
 }
 
-#header{
-    height: 50px;
-}
-
-#header-logo{
-    display: flex;
-    align-items: center;
-}
-
 .container-fluid{
     margin: 0 auto;
     width: 1280px;
@@ -20,7 +11,21 @@ body{
 }
 
 .row{
-    padding-left: 16px;
+    padding: 0 22px;
+}
+
+/* header style */
+
+#header{
+    height: 50px;
+}
+
+#header-logo{
+    display: flex;
+}
+
+.header-height{
+    height: 50px;
 }
 
 #logo{
@@ -32,8 +37,12 @@ body{
 
 }
 
+#bar-icon{
+    width:25px;
+    order: 1;
+}
+
 #nav{
-    height: 50px;
     display: flex;
     border-right: 1px solid lightgray;
     font-size: 15px; font-weight: 700; color: #444;
@@ -50,9 +59,74 @@ body{
     width: 85px;
 }
 
-@media screen and (max-width: 1280px) {
+/* banner style */
+
+.carousel-inner{
+    height: 526px;
+}
+
+.carousel-item{
+    height: 100%;
+}
+
+.carousel-caption{
+    top: 10rem;
+    padding: 0;
+}
+
+.carousel-caption h3{
+    margin: 0;
+    padding: 0;
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.carousel-caption p{
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    color: #bbb;
+    font-weight: 100;
+}
+
+@media screen and (max-width: 1279px) {
     .container-fluid{
         width: 100%;
         margin: 0;
+    }
+}
+
+@media screen and (max-width: 991px){
+    #header-logo {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    #logo{order: 1;}
+
+    .carousel-inner{
+        height: 450px;
+    }
+
+    .carousel-caption h3{
+        font-size: 40px;
+    }
+
+    .carousel-caption p{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .carousel-inner{
+        height: 350px;
+    }
+
+    .carousel-caption h3{
+        font-size: 30px;
+    }
+
+    .carousel-caption p{
+        font-size: 12px;
     }
 }
