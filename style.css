@@ -19,14 +19,21 @@ a{
 }
 
 .row{
-    padding: 0 22px;
+    padding: 0 14px;
     margin: 0;
+}
+
+.icon{
+    background-image: url("mega-image/icon.png");
 }
 
 /* header style */
 
 #header{
-    height: 50px;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    background: #fff;
 }
 
 #header-logo{
@@ -126,7 +133,7 @@ a{
 }
 
 .carousel-caption{
-    top: 10rem;
+    top: 13rem;
     padding: 0;
 }
 
@@ -143,6 +150,125 @@ a{
     font-size: 24px;
     color: #bbb;
     font-weight: 100;
+}
+
+/* movie style */
+
+#movie{
+    padding-top: 100px;
+}
+
+#movie-title{
+    display: block;
+    width: 848px;
+    height: 57px;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    padding: 0;
+    margin: 0 auto;
+}
+
+#movie-title li{
+    list-style: none;
+    line-height: 57px;
+    text-align: center;
+    float: left;
+    width: 25%;
+    border-right: 1px solid lightgray;
+}
+
+#movie-title a{
+    display: block;
+    color: #666;
+    height: 100%;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+
+#movie-title a:active{
+    background: #666;
+    color: #fff;
+}
+
+.clear{
+    clear: both;
+}
+
+#movie-slider{
+    display: flex;
+    padding-top: 44px;
+}
+
+#movie-list{
+    position: relative;
+    padding: 0 10px;
+}
+
+#movie-wrapper{
+    border: 1px solid lightgray;
+}
+
+#movie-rank{
+    position: absolute;
+    top:17px;
+    width: 50px;
+    height: 50px;
+    background-color: #3a0e6a;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    text-shadow: 1px 1px 3px rgb(0 0 0 / 50%);
+}
+
+.rank-style{
+    position: absolute;
+    top: 10px;
+    left: 12px;
+}
+
+#mx{
+    position: absolute;
+    top: 17px;
+    right: 17px;
+    width: 103px;
+    height: 25px;
+    background-position: 0 -75px;
+}
+
+#information{
+    padding: 17px;
+}
+
+#information-top{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#film-rating{
+    margin-top: 9px;
+    width: 29px;
+    height: 29px;
+    background-position: -87px -125px;
+}
+
+#movie-name{
+    color: #333;
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+#information-bottom button{
+    width: 49%;
+    padding: 10px 0;
+    text-align: center;
+    background: #f2f2f2;
+    color: #666;
+    font-size: 18px;
+    border : none;
+    font-weight: 600;
 }
 
 @media screen and (max-width: 1279px) {
@@ -174,6 +300,11 @@ a{
 
     #banner-row a, span{
         display: none;
+    }
+
+    #movie-title{
+        max-width: 848px;
+        width: auto;
     }
 }
 
