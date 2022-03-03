@@ -112,7 +112,7 @@ a{
     border: 1px solid #fff;
     color: #3a0e6a;
     background-color: #fff;
-    margin-right: 13px;
+    margin: 0 13px;
 }
 
 .banner-button-purple{
@@ -158,6 +158,13 @@ a{
     padding-top: 100px;
 }
 
+#movie-reserve{
+    display: none;
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
 #movie-title{
     display: block;
     width: 848px;
@@ -188,9 +195,9 @@ a{
     text-align: center;
 }
 
-#movie-title a:active{
+.active{
     background: #666;
-    color: #fff;
+    color: #fff !important;
 }
 
 .clear{
@@ -198,13 +205,24 @@ a{
 }
 
 #movie-slider{
+    width: 100%;
+    height: 583px;
     display: flex;
     padding-top: 44px;
+    flex-wrap: wrap;
+    overflow: hidden;
 }
 
 #movie-list{
+    width: 25%;
     position: relative;
     padding: 0 10px;
+    flex-shrink: 1;
+}
+
+#movie-list img{
+    object-fit: cover;
+    width: 100%;
 }
 
 #movie-wrapper{
@@ -251,7 +269,22 @@ a{
     margin-top: 9px;
     width: 29px;
     height: 29px;
+}
+
+.rating-icon1{
     background-position: -87px -125px;
+}
+
+.rating-icon2{
+    background-position: -58px -125px;
+}
+
+.rating-icon3{
+    background-position: 0 -125px;
+}
+
+.rating-icon4{
+    background-position: -29px -125px;
 }
 
 #movie-name{
@@ -298,13 +331,17 @@ a{
         font-size: 16px;
     }
 
-    #banner-row a, span{
+    #banner-row a{
         display: none;
     }
 
     #movie-title{
         max-width: 848px;
         width: auto;
+    }
+
+    #movie-list{
+        width: 33%;
     }
 }
 
@@ -334,4 +371,50 @@ a{
         background: rgba(0,0,0,0.6);
         border-color: #fff;
     }
+
+    #movie{
+        padding: 0;
+        background: #fff;
+    }
+
+    .movie-container{
+        padding: 24px;
+        border: 24px solid #d9d7e0;
+    }
+
+    #movie-reserve{
+        display: block;
+        padding-bottom: 5px;
+    }
+
+    #movie-title{
+        border: none;
+        height: 37px;
+    }
+
+    #movie ul{
+        border-bottom: 1px solid lightgray;
+    }
+
+    #movie-title li{
+        line-height: 37px;
+        border: none;
+        width: auto;
+        margin-right: 35px;
+    }
+    
+    .active{
+        background: none;
+        color: #666 !important;
+        border-bottom: 1px solid black;
+    }
+    
+    #movie-slider{
+        padding: 0;
+    }
+
+    #movie-list{
+        width: 50%;
+    }
+    
 }
