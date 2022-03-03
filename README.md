@@ -63,10 +63,6 @@ commit 3
 
 업데이트 내역 : banner파트 작업완료
 
-보완할 점 : X
-
-보완 방법 : X
-
 비고
 1. id는 고유한것에 class는 여러곳에 쓰이는것에 붙인다고 배워서 그대로 사용중이다. 그러다보니 나는 id의 비율이 더 많은데 다른 코드를 보면 class의 비율이 압도적으로 많다.
 정말 중요한 or 큰 범위의 태그(header, banner등)에만 id를 사용하는것이 좋을까? 관련 자료를 찾아보며 고민해봐야겠다.
@@ -77,10 +73,13 @@ commit 4
 
 업데이트 내역 : movie파트 구조짜기 완료
 
-보완할 점 : X
+비고
+1. java script로 movie-title에 action유지되게 할 것
+2. java script로 movie-slider에 silde 기능 추가할 것
 
-보완 방법 : X
+commit 5
+
+업데이트 내역 : movie파트 movie-title에 action유지기능 추가, movie-slider에 slide기능 작성중
 
 비고
-1. java script로 movie-title에 action유지되게 할것
-2. java script로 movie-slider에 silde 기능 추가할것
+1. slide기능 제대로 작동되게 만들 것
