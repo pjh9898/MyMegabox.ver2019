@@ -82,4 +82,4 @@ commit 5
 업데이트 내역 : movie파트 movie-title에 action유지기능 추가, movie-slider에 slide기능 작성중
 
 비고
-1. slide기능 제대로 작동되게 만들 것
+1. slide기능 제대로 작동되게 만들 것.
