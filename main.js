@@ -1,8 +1,5 @@
 let movieTitle = document.querySelectorAll("#movie-title a");
 let slides = document.querySelector("#movie-slider");
-let slide = document.querySelectorAll("#movie-list");
-
-// console.log("slide : ", slide);
 
 movieTitle.forEach(menu => menu.addEventListener(
     "click", () => {
@@ -11,10 +8,10 @@ movieTitle.forEach(menu => menu.addEventListener(
     }));
 
 slides.addEventListener("mousedown", ()=>{
-    slide.forEach((list) => list.addEventListener("mousemove", onDrag(list)));
+    slides.addEventListener("mousemove", onDrag);
 });
 document.addEventListener("mouseup", ()=>{
-    slide.forEach((list) => list.removeEventListener("mousemove", onDrag(list)));
+    slides.removeEventListener("mousemove", onDrag);
 });
 
 const makeMovieList = () => {
@@ -24,7 +21,7 @@ const makeMovieList = () => {
         movieListHTML += `
         <div id="movie-list">
             <div id="movie-wrapper">
-              <img src="mega-image/poster0${i}.jpg">
+              <img src="mega-image/poster0${i}.jpg" draggable="false">
               <div id="movie-rank">
                 <span class="rank-style">${i}</span>
               </div>
@@ -32,7 +29,7 @@ const makeMovieList = () => {
               <div id="information">
                 <div id="information-top">
                   <div id="film-rating" class="icon rating-icon${(i - 1)%4 + 1}"></div>
-                  <strong id="movie-name">침묵</strong>
+                  <strong id="movie-name">${movieTitle[i-1]}</strong>
                 </div>
                 <div id="information-bottom">
                   <button type="button">상세정보</button>
@@ -46,12 +43,14 @@ const makeMovieList = () => {
     }
 }
 
-function onDrag({list, movementX}){
-    console.log(list)
-    let getStyle = window.getComputedStyle(list);
-    let left = parseInt(getStyle.left);
-    list.style.left = `${left + movementX}px`
-    console.log("mousedown", movementX);
+function onDrag({movementX}){
+    let slide = document.querySelectorAll("#movie-list");
+
+    slide.forEach((list) => {
+      let getStyle = window.getComputedStyle(list);
+      let left = parseInt(getStyle.left);
+      list.style.left = `${left + movementX}px`;
+    });
 }
 
 // function slider(slide){
