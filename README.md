@@ -5,12 +5,6 @@
 
 작업 기술 : HTML, CSS, Javascript
 
-/* 커밋 과정 */
-
-* 커밋 과정중 보완 방법에 (?)표시는 방법을 몰라 작업 종료 시점에 가볍게 예상하여 작성한 방법입니다.
-어떠한 근거에 기반한 방법이 아니니 기상천외한 방법이 적혀있더라도 웃으며 넘어가주시길 바랍니다.
-* 보완할 점 수정사항 숫자 매기는 예시 : commit5에서 commit3의 2번째 보완사항을 수정 => commit5의 보완할 점 수정사항에 commit 3-2 : ~~~~~~ 라고 작성
-
 <commit form>
       
   commit n
@@ -18,7 +12,7 @@
   업데이트 내역
   보완할 점
   보완 방법
-  비고(작성할 것이 있을시)
+  비고
       
 </form>
 
@@ -82,4 +76,18 @@ commit 5
 업데이트 내역 : movie파트 movie-title에 action유지기능 추가, movie-slider에 slide기능 작성중
 
 비고
-1. slide기능 제대로 작동되게 만들 것.
+1. slide기능 제대로 작동되게 만들 것
+
+commit 6
+
+업데이트 내역 : movie-slider에 slide기능 임시완료
+
+보완 할점 :
+1. slider 양쪽 끝부분 slider되는 한계선 추가
+2. slider 사이즈 재조정
+3. slider 기능 부드럽게 만들기
+
+보완 방법 :
+1. 한계선 스타일 추가
+2. 하단 잘리는것 수정
+3. how to draggable slider smoothly검색해보기(?)
